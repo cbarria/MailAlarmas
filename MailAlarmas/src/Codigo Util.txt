@@ -1,0 +1,37 @@
+ //****** Cantidad de Mensajes
+ //Folder inbox = Folder.bind(service, WellKnownFolderName.Inbox);
+ //System.out.println("messages: " + inbox.getTotalCount());
+
+ /* ***** Enviar Correo
+ EmailMessage msg; 
+ msg = new EmailMessage(service);
+ msg.setSubject("Esto es una prueba API Exchange en Java");
+ msg.setBody(MessageBody.getMessageBodyFromText("Es una prueba en Java"));
+ msg.getToRecipients().add("carlos.barria@vtr.cl");
+ msg.send();
+ */
+
+ /* Lista todas las carpetas del mailbox
+ Folder rootfolder  = Folder.bind(service, WellKnownFolderName.Inbox);
+ System.out.println(rootfolder.getDisplayName() + " " + rootfolder.getChildFolderCount());
+ rootfolder.load();
+ for (Folder folder : rootfolder.findFolders(new FolderView(30))) {
+	 System.out.println("Nombre: " + folder.getDisplayName() + " ID: " + folder.getId());
+ }
+*/
+
+/* Listar mas items en el view!
+do {
+
+	findResults = service.FindItems(WellKnownFolderName.Inbox, view);
+
+	for(Item item : findResults.getItems())
+	{
+		// Do something with the item.
+	}
+
+	view.Offset += 50;
+} while (results.MoreAvailable);
+ */	
+			
+	
